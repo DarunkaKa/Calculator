@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="https://banner2.cleanpng.com/20180512/eyw/kisspng-computer-icons-scientific-calculator-symbol-mathem-5af707899d81f4.3845089715261387616452.jpg">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="css/converter.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calc">
+            <div class="calc-numbers"><span>0</span></div>
+            <div class="calc-result"><span></span></div>
+        </div>
+
+        <div class="history-history" id="history-con">
+            <button id="history-standart" onclick="showCalculator()">⏎</button>
+            <!--<button id="theme-history" onclick="">+</button>-->
+            <button id="clear-history" onclick="clearNotes()">Clear history</button>
+            <div id="history-container"></div>
+        </div>
+
+        <div id="converter-container">
+            <button id="standart2" onclick="showStandartCalculator()">⏎</button>
+            <!--<button id="theme-convert" onclick="">+</button>-->
+            <br><br>
+            <div>
+                <p id="converter-toggle">Converter</p>
+                <div id="converter-dropdown">
+                    <select id="conversion-type">
+                        <option value="length">Length</option>
+                        <option value="temperature">Temperature</option>
+                        <option value="area">Area</option>
+                        <option value="mass">Mass</option>
+                        <option value="data">Data</option>
+                        <option value="speed">Speed</option>
+                        <option value="time">Time</option>
+                    </select>
+                </div>
+                <div>
+                    <select id="conversion-type2"></select>
+                    <input type="text" id="from-value" placeholder="input text">
+                </div>
+                <div>
+                    <select id="conversion-type3"></select>
+                    <input type="text" id="to-value" placeholder="convert" disabled>
+                </div>
+            </div>
+        </div>
+   
+          
+        <div class="buttons">
+            <div class="row-1">
+                <!--<button class="theme">theme</button>-->
+                <button class="btn-rounded" id="but-history" onclick="showHistory()">⏲</button>
+                <button class="btn-rounded" id="but-1">⏱</button>
+                <button class="btn-rounded" id="but-2">⛮</button>
+                <button class="big-calc" id="return-old">⏎</button>
+            </div>
+            <hr>
+            <div class="row-2">
+                <button id="clear-all">C</button>
+                <button id="but-brackets">()</button>
+                <button class="btn-rounded" id="clear-one">⌫</button>
+                <button class="btn-rounded" id="but-plus">+</button>
+
+                <button class="big-calc" id="">%</button>
+                <button class="big-calc" id="btn-nc" onclick="clearMemory()">MC</button>
+            </div>
+            <div class="row-3">
+                <button id="but-seven">7</button>
+                <button id="but-eig">8</button>
+                <button id="but-nein">9</button>
+                <button class="btn-rounded" id="but-minus">-</button>
+
+                <button class="big-calc" id="">x!</button>
+                <button class="big-calc" id="btn-mr" onclick="recallMemory()">MR</button>
+            </div>
+            <div class="row-4">
+                <button id="but-four">4</button>
+                <button id="but-five">5</button>
+                <button id="but-six">6</button>
+                <button class="btn-rounded" id="but-multiplication">&#215;</button>
+
+                <button class="big-calc" id="">x<sup>n</sup></button>
+                <button class="big-calc" id="btn-m+" onclick="addToMemory()">M+</button>
+            </div>
+            <div class="row-5">
+                <button id="but-one">1</button>
+                <button id="but-two">2</button>
+                <button id="but-three">3</button>
+                <button class="btn-rounded" id="but-divison">&#247;</button>
+
+                <button class="big-calc" id="">√x</button>
+                <button class="big-calc" id="btn-m-" onclick="subtractFromMemory()">M-</button>
+            </div>
+            <div class="row-6">
+                <button id="plus-minus">+/-</button>
+                <button id="but-zero">0</button>
+                <button id="but-point">.</button>
+                <button  class="btn-rounded" id="but-equal">=</button>
+
+                <button class="big-calc" id="">&pi;</button>
+                <button class="big-calc" id="btn-mu" onclick="multiplyMemory()">MU</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/history.js"></script>
+    <script src="js/converter.js"></script>
+    <script src="js/big-calc.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+#converter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+
+#standart2,
+#theme-convert {
+  height: 50px;
+  width: 50px;
+  margin-right: 25px;
+  background: linear-gradient(to bottom, #96b39f, #8da98e);
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+  
+  #standart2::before,
+#theme-convert::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  background-color: rgb(86, 108, 92, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+  
+  #standart2:hover,
+#theme-convert:hover{
+  background-color: rgb(86, 108, 92);
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgb(86, 108, 92, 0.7); 
+}
+  
+  #standart2:hover::before,
+#theme-convert:hover::before {
+  opacity: 1;
+}
+
+#converter-dropdown {
+  margin-bottom: 10px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+}
+
+#conversion-type {
+  width: 200px;
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: rgb(86, 108, 92);
+  color: white;
+}
+
+#converter-toggle {
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+#conversion-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#conversion-inputs input {
+  width: 100px;
+  height: 30px;
+  margin-right: 10px;
+  background-color: #96b39f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+
+#conversion-type2, #conversion-type3 {
+  width: 130px;
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: #96b39f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#from-value, #to-value {
+  width: 100px;
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: #96b39f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+  
